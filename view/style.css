@@ -1,0 +1,95 @@
+/* INICIO DE ESTILIZAÇÃO GERAL; define o reset e o posicionamento centralizado no viewport */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d0d26; /* Azul Escuro */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* INICIO DE ESTILIZAÇÃO DO FORMULÁRIO; cria o card central com bordas em rosa e fundo roxo escuro */
+form {
+    background-color: #2e003e; /* Roxo Escuro */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ff007f; /* Rosa */
+}
+
+/* INICIO DE ESTILIZAÇÃO DE TEXTOS; formata o título e subtítulo do formulário */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #ff007f; /* Rosa */
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 0.9em;
+    color: #a29bfe; /* Roxo claro */
+    margin: 0;
+}
+
+/* INICIO DE ESTILIZAÇÃO DE CAMPOS; organiza o layout dos inputs e labels */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #4834d4; /* Roxo */
+    background-color: #1a1a2e; /* Azul mais escuro para contraste */
+    color: #ffffff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus{
+    outline: none;
+    border-color: #ff007f; /* Rosa no foco */
+    box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+}
+
+/* INICIO DE ESTILIZAÇÃO DO BOTÃO; define o comportamento visual do botão de cadastro */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4834d4; /* Roxo */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #ff007f; /* Rosa no hover */
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
