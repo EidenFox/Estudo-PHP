@@ -3,29 +3,29 @@
 //isset() = verifica se a variavel existe no array POST ou GET ou ...
 //empty() = verifica se a variavel está vazia
 
-include '../model/Categoria.php';
-if($_POST){
+require_once '../model/Categoria.php';
+include '../dao/DaoCategorias.php';
+
+$dao = new DaoCategorias();
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(
         isset($_POST["nome"]) &&
-        isset($_POST["descricao"]) &&
-        !empty($_POST["nome"]) &&
-        !empty($_POST["descricao"])
+        isset($_POST["acao"]) &&
+        !empty($_POST["nome"])
     ){
         $nome = $_POST["nome"];
-        $descricao = $_POST["descricao"];
-        // echo "<pre>";
-        // var_dump($nome, $descricao);
-        // echo "</pre>";
         
         if ($_POST["acao"] == "create"){
             
             $categoria1 = new Categoria();
             
-            $categoria1->setID(1);
             $categoria1->setNome($nome);
-            $categoria1->setDescricao($descricao);
-            
-            print_r($categoria1);
+
+            if($dao -> create($categoria1)){
+                echo "Categoria " . $categoria1->getNome() . "cadastrada com sucesso!!";
+            }else{
+                echo "Erro ao cadastrar categoria!";
+            }
 
         }
 

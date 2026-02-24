@@ -1,7 +1,7 @@
 <?php
 
-include './model/Produto.php';
-include './model/Categoria.php';
+include './model/produtos/Produto.php';
+include './model/categorias/Categoria.php';
 
 $produto1 = new Produto();
 $categoria1 = new Categoria();

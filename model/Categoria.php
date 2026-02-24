@@ -3,7 +3,6 @@
 class Categoria{
     public $id;
     public $nome;
-    public $descricao;
 
     /**
      * Setters
@@ -16,10 +15,6 @@ class Categoria{
         $this->nome = $nome;
     }
 
-    public function setDescricao($descricao){
-        $this->descricao = $descricao;
-    }
-
     /**
      * Getters
      */
@@ -29,10 +24,6 @@ class Categoria{
 
     public function getNome(){
         return $this->nome;
-    }
-    
-    public function getDescricao(){
-        return $this->descricao;
     }
 
 
