@@ -31,14 +31,19 @@
         </div>
 
         <div>
-            <select name="categoria" id="categoria">
-                <option value="1">Bolos</option>
-                <option value="2">Tortas</option>
-                <option value="3">Biscoitos</option>
-                <option value="4">Cupcakes</option>
-                <option value="5">Bebidas</option>
+            <label for="categoria_id">Categoria:</label>
+            <select name="categoria_id" id="categoria_id" required>
+
+                <?php foreach ($categoria as $itemCategoria): ?>
+                    <option value="<?=  $itemCategoria['id']; ?>">
+                        <?= htmlspecialchars($itemCategoria['nome']); ?>
+                    </option>
+                    <?php endforeach; ?>
+
             </select>
+
         </div>
+
 
         <input type="hidden" name="acao" value="create">
         <div>

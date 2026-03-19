@@ -1,18 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="view/categorias/formCadastroCategoria.php">Cadastrar Categorias</a></li>
+            <li><a href="controller/controllerCategorias.php?acao=listAll">Listar Categorias</a></li>
 
-include './model/produtos/Produto.php';
-include './model/categorias/Categoria.php';
+            <li><a href="controller/controllerProdutos.php?acao=createForm">Cadastrar Produto</a></li>
+            <li>aaaaa</li>
+        </ul>
+    </nav>
 
-$produto1 = new Produto();
-$categoria1 = new Categoria();
-
-$categoria1->setID(1);
-$categoria1->setNome("Doces");
-$categoria1->setDescricao("Doces e balas em geral");
-
-$produto1->setID(1);
-$produto1->setNome("Barra de Chocolate");
-$produto1->setDescricao("Barra de chocolate 50% cacau da marca menino");
-$produto1->setPreco(9.45);
-$produto1->setEstoque(4);
-$produto1->setCategoria_id($categoria1);
+</body>
+</html>
